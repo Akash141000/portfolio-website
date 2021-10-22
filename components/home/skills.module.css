@@ -1,0 +1,12 @@
+.container{
+    display:  flex;
+    flex-flow: column nowrap;
+    color: #66fcf1;
+    margin-top: 1rem;
+}
+
+.skillItem{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin: 0.4rem 0px;
+}

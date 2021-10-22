@@ -1,0 +1,20 @@
+.container {
+  height: 20rem;
+  width: inherit;
+  display: flex;
+  flex-flow: column;
+  position: relative;
+  color: #66fcf1;
+  background-color:transparent;
+  cursor: pointer;
+}
+
+.img {
+  height: 12rem;
+  width: 100%;
+  position: relative;
+}
+
+.img img{
+    border-radius: 1rem;
+}
