@@ -18,20 +18,22 @@ const Project: React.FC<projProps> = (props) => {
   const { project } = props;
 
   return (
-    <Link href={`/project/${props.project.key}`}>
+    <Link passHref href={`/projects/${props.project.key}`}>
       <div className={styles.container}>
-        <div className={styles.img}>
-          <Image
-            unoptimized={true}
-            loader={myLoader}
-            src={props.project.image}
-            layout="fill"
-            objectFit="fill"
-          />
-        </div>
-        <div className="text-center font-bold text-xl m-2">
-          {project.title}
-        </div>
+        {props.project.image && (
+          <div className={styles.img}>
+            <Image
+              alt="project-image"
+              unoptimized={true}
+              loader={myLoader}
+              src={props.project.image}
+              layout="fill"
+              objectFit="fill"
+            />
+            )
+          </div>
+        )}
+        <div className="text-center font-bold text-xl m-2">{project.title}</div>
         <div className="text-center">{project.excerpt}</div>
       </div>
     </Link>

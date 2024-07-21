@@ -1,5 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { IProject } from "../utils/type";
+import { PROJECTS_DATA } from "../utils/projects.data";
 
 interface IProjectsContext {
   loading: boolean;
@@ -25,9 +26,10 @@ export const ProjectsContextProvider = (props) => {
 
   const fetchProjects = async () => {
     isLoading(true);
-    const response = await fetch("/api/projects");
-    const result = await response.json();
-    setData(result.content);
+    // const response = await fetch("/api/projects");
+    // const result = await response.json();
+    // setData(result.content);
+    setData(PROJECTS_DATA);
     isLoading(false);
   };
 

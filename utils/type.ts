@@ -1,7 +1,7 @@
 export interface IProject {
   key: string;
   title: string;
-  image: string;
+  image?: string;
   description: string;
   attachedImages?: string[];
   stack: string;

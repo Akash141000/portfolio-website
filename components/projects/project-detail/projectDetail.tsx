@@ -12,9 +12,17 @@ const ProjectDetailComponent = (props: { project: IProject }) => {
   return (
     <div className={styles.container}>
       <div className="text-2xl mb-2 font-bold text-center">{project.title}</div>
-      <div className={styles.img}>
-        <Image src={project.image} layout="fill" unoptimized={true} />
-      </div>
+      {project.image && (
+        <div className={styles.img}>
+          <Image
+            alt="project-image"
+            src={project.image}
+            layout="fill"
+            unoptimized={true}
+          />
+        </div>
+      )}
+
       <div className="text-xl my-2 text-center">{project.excerpt}</div>
       <div className="text-lg my-2">{project.description}</div>
       <ProjectDetailStack project={project} />

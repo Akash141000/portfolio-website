@@ -21,7 +21,7 @@ const Intro = (props: { intro: string }) => {
   const { intro } = props;
   return (
     <>
-      <div className="h-auto w-auto mt-4 bg-white p-5 text-lg  rounded-sm">
+      <div className="h-auto w-auto mt-4 bg-white p-5 text-sm tracking-widest rounded-sm">
         {intro}
       </div>
       <div className="flex flex-col justify-center items-center">

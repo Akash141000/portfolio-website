@@ -20,10 +20,10 @@ const HomePage: NextPage<{ about: IAbout }> = (props) => {
         <title>Portfolio</title>
       </Head>
       <Main>
-          <Intro intro={description} />
-          <Bio />
-          <Skills skills={skills} />
-          <Hobbies hobbies={hobbies} />
+        <Intro intro={description} />
+        <Skills skills={skills} />
+        <Bio />
+        <Hobbies hobbies={hobbies} />
       </Main>
     </>
   );

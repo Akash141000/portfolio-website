@@ -11,16 +11,24 @@ const Skills = (props: { skills: ISkills }) => {
   for (const key in skills) {
     skillElement.push(
       <div key={key} className={styles.skillItem}>
-        <span className="text-lg md:text-xl ">{skills[key].title}</span>
-       <span className="text-base md:text-lg tracking-wide">{skills[key].content}</span>
+        <span className="bg">
+          <div className="text-md tracking-widest md:text-md flex justify-center font-medium">
+            {skills[key].title}
+          </div>
+          <div className="text-sm md:text-sm tracking-wide flex justify-center italic">
+            {skills[key].content}
+          </div>
+        </span>
       </div>
     );
   }
 
   return (
     <div className={styles.container}>
-      <span className="text-2xl font-bold underline mb-2">Skills</span>
-      {skillElement}
+      <span className="text-xl tracking-wide font-bold underline mb-2">
+        Skills
+      </span>
+      <div className="flex flex-wrap">{skillElement}</div>
     </div>
   );
 };

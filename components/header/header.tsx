@@ -8,9 +8,9 @@ import styled from "styled-components";
 import { Github } from "@styled-icons/boxicons-logos";
 
 const GithubIcon = styled(Github)`
-display:inline-block;
-height:1.5rem;
-color: white;
+  display: inline-block;
+  height: 1.5rem;
+  color: white;
 `;
 
 const Navbar: React.FC = (props) => {
@@ -22,21 +22,19 @@ const Navbar: React.FC = (props) => {
         <Link href="/">About</Link>
       </li>
       <li>
-        <Link href="/portfolio"> Projects</Link>
+        <Link href="/projects"> Projects</Link>
       </li>
       <li>
         <Link href="/contact"> Contact Me</Link>
       </li>
       <li>
-        <Link href="https://github.com/Akash141000">
+        <Link passHref href="https://github.com/Akash141000">
           <span>
             <span className="hidden md:inline-block hover:underline">
-            <GithubIcon />
-            Source
+              <GithubIcon />
+              Source
             </span>
-            <span className="md:hidden">
-              View Source
-            </span>
+            <span className="md:hidden">View Source</span>
           </span>
         </Link>
       </li>
@@ -46,8 +44,8 @@ const Navbar: React.FC = (props) => {
   return (
     <>
       <nav className={styles.navbar}>
-        <header className="text-3xl font-bold">
-          <Link href="/"> Akash </Link>{" "}
+        <header className="text-2xl font-bold">
+          <Link href="/"> Portfolio </Link>
         </header>
         <div className="hidden md:inline-block">{navItems}</div>
 
