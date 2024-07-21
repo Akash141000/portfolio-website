@@ -39,4 +39,4 @@ const Projects: NextPage = () => {
   );
 };
 
-export default PortFolio;
+export default Projects;
