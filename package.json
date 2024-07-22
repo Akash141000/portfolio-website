@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@styled-icons/boxicons-logos": "^10.38.0",
+    "@styled-icons/boxicons-solid": "^10.47.0",
     "@styled-icons/entypo": "^10.34.0",
     "add": "^2.0.6",
     "firebase": "^9.1.3",
