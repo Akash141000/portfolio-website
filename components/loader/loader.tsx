@@ -1,6 +1,6 @@
-import styles from "./loading.module.css";
+import styles from "./loader.module.css";
 
-const Loading = () => {
+export const Loader = () => {
   return (
     <div className={styles["lds-ring"]}>
       <div></div>
@@ -10,5 +10,3 @@ const Loading = () => {
     </div>
   );
 };
-
-export default Loading;

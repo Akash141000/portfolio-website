@@ -4,9 +4,9 @@ import { useRouter } from "next/dist/client/router";
 import { useContext } from "react";
 
 //layout
-import Main from "../../components/layout/main";
+import Main from "../../components/layout/layout";
 import Loading from "../../components/layout/loading";
-import ProjectDetailComponent from "../../components/projects/project-detail/projectDetail";
+import ProjectDetailComponent from "../../components/project-detail/projectDetail";
 import ProjectContext from "../../store/project-context";
 
 const ProjectDetail: NextPage = () => {

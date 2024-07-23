@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 
-import styles from "./header.module.css";
+import styles from "./navbar.module.css";
 
 //icon
 import styled from "styled-components";
@@ -54,7 +54,7 @@ const Navbar: React.FC = (props) => {
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          className="h-7 w-7 p-1 active:bg-black active:ring-electric-blue rounded-sm  ring hover:-translate-y-0.5 translate transform md:hidden ring-opacity-50"
+          className="h-7 w-7 p-1 active:bg-dark active:ring-electric-blue rounded-sm  ring hover:-translate-y-0.5 translate transform md:hidden ring-opacity-50"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"

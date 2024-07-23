@@ -1,13 +1,11 @@
 import { AppProps } from "next/dist/shared/lib/router/router";
-
-//components
-import Navbar from "../components/header/header";
+import Navbar from "../components/navbar/navbar";
 import { ProjectsContextProvider } from "../store/project-context";
 
 //styles
 import "../styles/global.css";
 
-const MyApp = ({ Component, pageProps }: AppProps) => {
+const App = ({ Component, pageProps }: AppProps) => {
   return (
     <ProjectsContextProvider>
       <Navbar />
@@ -16,4 +14,4 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
   );
 };
 
-export default MyApp;
+export default App;

@@ -3,10 +3,10 @@ import Image from "next/dist/client/image";
 //css
 import styles from "./projectDetail.module.css";
 
-import { IProject } from "../../../utils/type";
-import ProjectDetailStack from "./project-detail-stack/projectDetailStack";
+import ProjectDetailStack from "../project-detail-stack/projectDetailStack";
+import { IProject } from "../project/project";
 
-const ProjectDetailComponent = (props: { project: IProject }) => {
+export const ProjectDetail = (props: { project: IProject }) => {
   const { project } = props;
 
   return (
@@ -29,5 +29,3 @@ const ProjectDetailComponent = (props: { project: IProject }) => {
     </div>
   );
 };
-
-export default ProjectDetailComponent;

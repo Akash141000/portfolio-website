@@ -17,22 +17,20 @@ const chevronRight = (
   </svg>
 );
 
-const Intro = (props: { intro: string }) => {
+export const Introduction = (props: { intro: string }) => {
   const { intro } = props;
   return (
     <>
-      <div className="h-auto w-auto mt-4 bg-white p-5 text-sm tracking-widest rounded-sm">
+      <div className="h-auto w-auto mt-4 bg-light p-5 text-sm tracking-widest rounded-sm">
         {intro}
       </div>
       <div className="flex flex-col justify-center items-center">
-        <button className="group bg-green-600  rounded-md p-2 mt-10 text-white text-lg  hover:bg-green-700">
-          <Link href="/portfolio">
-            <a>My Portfolio{chevronRight}</a>
+        <button className="group bg-green  rounded-md p-2 mt-10 text-light text-lg  hover:bg-green-700">
+          <Link href="/work">
+            <a>Work Experience{chevronRight}</a>
           </Link>
         </button>
       </div>
     </>
   );
 };
-
-export default Intro;

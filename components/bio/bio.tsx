@@ -1,4 +1,4 @@
-const Bio = () => {
+export const Bio = () => {
   return (
     <div className="mt-6 text-electric-blue">
       <p className="text-xl mb-2 underline font-semibold tracking-wide">Bio</p>
@@ -19,7 +19,7 @@ const Bio = () => {
           {`Completed B.sc IT from V.G. Vaze college`}
         </span>
 
-        <span className="font-bold">2020 to 2022</span>
+        <span className="font-bold">2022</span>
         <span className="col-span-3">
           {` M.sc IT from Mulund college of commerce`}
         </span>
@@ -27,5 +27,3 @@ const Bio = () => {
     </div>
   );
 };
-
-export default Bio;

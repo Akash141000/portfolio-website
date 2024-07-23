@@ -1,6 +1,6 @@
-import { IProject } from "./type";
+import { IProject } from "../types/types";
 
-export const PROJECTS_DATA: IProject[] = [
+export const PROJECT_DATA: IProject[] = [
   {
     key: "go-grpc",
     description: "Basic example that shows the use of grpc using golang",

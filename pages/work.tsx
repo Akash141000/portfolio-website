@@ -1,17 +1,13 @@
-import WorkExperience from "../components/home/workExperience";
-import Head from "next/head";
-import Main from "../components/layout/main";
+import { Head, Layout } from "../components";
+import { Jobs } from "../components/jobs/jobs";
 
 const Work = () => {
   return (
     <>
-      <Head>
-        <meta name="description" content="projects" />
-        <title>Projects</title>
-      </Head>
-      <Main>
-        <WorkExperience />
-      </Main>
+      <Head content="work" title="Work" />
+      <Layout>
+        <Jobs />
+      </Layout>
     </>
   );
 };

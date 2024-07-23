@@ -4,8 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "electric-blue": "#66fcf1",
+        "primary": "",
+        "secondary":"",
+        "green":"rgba(4,120,87)",
+        "dark":"black",
+        "light":"white",
       },
+      textColor: {
+        "light":"white",
+        "dark":"black"
+      }
     },
   },
   variants: {

@@ -3,7 +3,7 @@ import { ISkills } from "../../utils/type";
 //css
 import styles from "./skills.module.css";
 
-const Skills = (props: { skills: ISkills }) => {
+export const Skills = (props: { skills: ISkills }) => {
   const { skills } = props;
 
   const skillElement = [];
@@ -32,5 +32,3 @@ const Skills = (props: { skills: ISkills }) => {
     </div>
   );
 };
-
-export default Skills;

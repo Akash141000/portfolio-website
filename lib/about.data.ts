@@ -1,6 +1,6 @@
 import { title } from "process";
 
-const description = `Hello, I'm Akash , a passionate MEAN/MERN Stack Developer and React Native enthusiast with a knack for AWS and Azure cloud technologies and DevOps.
+const introduction = `Hello, I'm Akash , a passionate MEAN/MERN Stack Developer and React Native enthusiast with a knack for AWS and Azure cloud technologies and DevOps.
 With hands-on experience in crafting robust applications using MongoDB, Express.js, Angular/React, and Node.js, I thrive on building dynamic and scalable solutions that drive innovation
 I'm well-versed in leveraging the power of AWS and Azure cloud platforms to architect and deploy cloud-native applications efficiently.
 I'm deeply passionate about mobile development, and React Native has been my go-to framework for building cross-platform mobile apps with native-like performance.
@@ -57,7 +57,7 @@ const skills = [
 ];
 
 export const About_data = {
-  description: description,
+  introduction: introduction,
   hobbies: hobbies,
   skills: skills,
 };

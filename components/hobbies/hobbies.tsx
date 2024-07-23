@@ -1,4 +1,4 @@
-const Hobbies = (props: { hobbies: string }) => {
+export const Hobbies = (props: { hobbies: string }) => {
   const { hobbies } = props;
 
   return (
@@ -8,5 +8,3 @@ const Hobbies = (props: { hobbies: string }) => {
     </div>
   );
 };
-
-export default Hobbies;

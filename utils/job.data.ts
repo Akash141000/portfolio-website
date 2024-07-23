@@ -1,6 +1,6 @@
-import { IWorkExp } from "./workExperience";
+import { IJobData } from "../types/types";
 
-export const WORK_EXPERIENCE: IWorkExp[] = [
+export const JOB_DATA: IJobData[] = [
   {
     companyName: "CodeB",
     designation: "Software Engineer",
