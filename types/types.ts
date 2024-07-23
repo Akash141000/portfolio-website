@@ -22,5 +22,8 @@ export interface IJobData {
     from: string;
     to: string;
   };
-  projects: Pick<IProject, "title" & "contribution" & "description" & "stack">;
+  projects: Pick<
+    IProject,
+    "title" & "contribution" & "description" & "stack"
+  >[];
 }
