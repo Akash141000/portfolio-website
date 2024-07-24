@@ -20,7 +20,7 @@ export const PROJECT_DATA: IProject[] = [
     title: "Microservices using Golang",
     description:
       "Basic microservices application created using Golang and Grpc protocol.",
-    stack: [""],
+    stack: ["NodeJs", "Docker", "RabbitMq", "Kubernetes", "MongoDB", "NestJs"],
     source: ["https://github.com/Akash141000/go-grpc-microservices"],
   },
   {

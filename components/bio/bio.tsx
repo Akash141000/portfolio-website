@@ -1,6 +1,6 @@
 export const Bio = () => {
   return (
-    <div className="mt-6 text-electric-blue">
+    <div className="mt-6 text-primary">
       <p className="text-xl mb-2 underline font-semibold tracking-wide">Bio</p>
       <div className="grid  grid-cols-4 gap-y-1  text-base md:text-md">
         <span className="font-bold ">2000</span>

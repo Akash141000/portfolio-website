@@ -8,13 +8,11 @@ export const JobProjectItem: React.FC<IProject> = ({
   contribution,
 }) => {
   return (
-    <div>
-      <div className="text-dark">
-        <div className="mt-5">
-          <JobProjectHeader title={title} description={description} />
-          <ProjectTechList stack={stack} />
-          <ProjectContributionList contribution={contribution} />
-        </div>
+    <div className="text-dark">
+      <div className="mt-5 overflow-scroll h-100v">
+        <JobProjectHeader title={title} description={description} />
+        <ProjectTechList stack={stack} />
+        <ProjectContributionList contribution={contribution} />
       </div>
     </div>
   );

@@ -1,8 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
-
-//
-import styles from "./project.module.css";
+import { Chip } from "../chip/chip";
 
 const ImageLoader = ({ src }) => {
   return `${src}`;
@@ -22,17 +19,22 @@ export interface IProject {
 }
 
 export const Project: React.FC<IProject> = ({
-  id,
   image,
   description,
   title,
+  source,
+  stack,
 }) => {
   return (
     // <Link passHref href={`/projects/${id}`}>
     <>
-      <div className={styles.container}>
+      <div
+        className={
+          "w-inhert flex flex-col text-primary border-solid border-2 border-primary rounded-md px-0.5 py-1"
+        }
+      >
         {image && (
-          <div className={styles.img}>
+          <div className="h-10 w-100 relative rounded-md">
             <Image
               alt="project-image"
               unoptimized={true}
@@ -44,8 +46,13 @@ export const Project: React.FC<IProject> = ({
             )
           </div>
         )}
-        <div className="text-center font-bold text-xl m-2">{title}</div>
-        <div className="text-center">{description}</div>
+        <div className="font-bold text-xl m-1 tracking-widest">{title}</div>
+        <div className="mx-2 tracking-widest">{description}</div>
+        <div>
+          {stack.map((s, i) => (
+            <Chip key={i} title={s} />
+          ))}
+        </div>
       </div>
     </>
     // </Link>

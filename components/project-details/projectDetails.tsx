@@ -1,5 +1,4 @@
 import Image from "next/dist/client/image";
-import styles from "./projectDetails.module.css";
 import { IProject } from "../project/project";
 
 interface IProjectDetails extends IProject {}
@@ -10,10 +9,10 @@ export const ProjectDetails: React.FC<IProjectDetails> = ({
   title,
 }) => {
   return (
-    <div className={styles.container}>
+    <div className={"flex flex-col nowrap h-100v w-100 text-primary"}>
       <div className="text-2xl mb-2 font-bold text-center">{title}</div>
       {image && (
-        <div className={styles.img}>
+        <div className={"relative h-90 w-100 rounded-sm"}>
           <Image alt="image" src={image} layout="fill" unoptimized={true} />
         </div>
       )}

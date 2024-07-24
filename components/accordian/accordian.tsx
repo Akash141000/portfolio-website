@@ -19,7 +19,7 @@ export const Accordian: React.FC<IAccordian> = ({
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
-    <div className="text-light m-5 px-3 border-solid border-white border-2 rounded-lg">
+    <div className="text-primary m-5 px-3 border-solid border-primary border-2 rounded-lg">
       <div
         id="header"
         className="flex flex-col w-100 justify-between align-center"
