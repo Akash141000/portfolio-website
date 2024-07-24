@@ -28,7 +28,8 @@ export const Project: React.FC<IProject> = ({
   title,
 }) => {
   return (
-    <Link passHref href={`/projects/${id}`}>
+    // <Link passHref href={`/projects/${id}`}>
+    <>
       <div className={styles.container}>
         {image && (
           <div className={styles.img}>
@@ -46,6 +47,7 @@ export const Project: React.FC<IProject> = ({
         <div className="text-center font-bold text-xl m-2">{title}</div>
         <div className="text-center">{description}</div>
       </div>
-    </Link>
+    </>
+    // </Link>
   );
 };
