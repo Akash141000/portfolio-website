@@ -1,56 +1,63 @@
 import React, { useState } from "react";
 import Link from "next/link";
-
 import styles from "./navbar.module.css";
-
-//icon
-import styled from "styled-components";
 import { Github } from "@styled-icons/boxicons-logos";
 
-const GithubIcon = styled(Github)`
-  display: inline-block;
-  height: 1.5rem;
-  color: white;
-`;
+interface INavItem {
+  href: string;
+  title: string | React.ReactNode;
+  passHref?: boolean;
+}
+
+const NavItem: React.FC<INavItem> = ({ href, title, passHref }) => {
+  return (
+    <div className="inline-block">
+      <Link passHref href={href}>
+        {title}
+      </Link>
+    </div>
+  );
+};
+
+const NavItems = () => {
+  return (
+    <>
+      <NavItem href="/" title="About" />
+      <NavItem href="/work" title="Work" />
+      <NavItem href="/projects" title="Projects" />
+      <NavItem href="/contact" title="Contact Me" />
+      <NavItem
+        passHref
+        href="https://github.com/Akash141000"
+        title={
+          <span>
+            <span className="flex flex-row hidden md:inline-block hover:underline ">
+              <Github />
+            </span>
+            <span>View Source</span>
+          </span>
+        }
+      />
+    </>
+  );
+};
 
 const Navbar: React.FC = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const navItems = (
-    <ul className={styles["ul-list"]}>
-      <li className="md:hidden">
-        <Link href="/">About</Link>
-      </li>
-      <li>
-        <Link href="/work"> Work</Link>
-      </li>
-      <li>
-        <Link href="/projects"> Projects</Link>
-      </li>
-      <li>
-        <Link href="/contact"> Contact Me</Link>
-      </li>
-      <li>
-        <Link passHref href="https://github.com/Akash141000">
-          <span>
-            <span className="hidden md:inline-block hover:underline">
-              <GithubIcon />
-              Source
-            </span>
-            <span className="md:hidden">View Source</span>
-          </span>
-        </Link>
-      </li>
-    </ul>
-  );
-
   return (
-    <>
-      <nav className={styles.navbar}>
-        <header className="text-2xl font-bold">
+    <div className="w-full flex flex-col bg-transparent">
+      <nav
+        className={
+          "flex flex-row justify-center bg-transparent align-center w-full max-w-sm lg:max-w-lg xl:max-w-xl 2xl:max-w-2xl self-center "
+        }
+      >
+        <div id="title" className="text-2xl font-semibold">
           <Link href="/"> Portfolio </Link>
-        </header>
-        <div className="hidden md:inline-block">{navItems}</div>
+        </div>
+        <div className="flex flex-row md:flex-col justify-center align-center w-100 h-100 md:inline-block">
+          <NavItems />
+        </div>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,9 +78,9 @@ const Navbar: React.FC = (props) => {
         </svg>
       </nav>
       <div className={isOpen ? styles["menu-icon-list"] : "hidden"}>
-        {navItems}
+        <NavItems />
       </div>
-    </>
+    </div>
   );
 };
 
