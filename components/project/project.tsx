@@ -53,6 +53,13 @@ export const Project: React.FC<IProject> = ({
             <Chip key={i} title={s} />
           ))}
         </div>
+        <div className="flex flex-col m-2">
+          {source.map((s, i) => (
+            <a key={i} href={s} className="mr-5 italic">
+              {s}
+            </a>
+          ))}
+        </div>
       </div>
     </>
     // </Link>
