@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from "react";
 import { PROJECT_DATA } from "../utils/project.data";
-import { IProject } from "../types/types";
+import { IProject } from "../components";
 
 interface IProjectsContext {
   loading: boolean;
@@ -33,9 +33,9 @@ export const ProjectsContextProvider = (props) => {
     isLoading(false);
   };
 
-  const findProject = (projectId: string): IProject => {
-    const project = data.find((item) => {
-      return item.key === projectId;
+  const findProject = (id: string): IProject => {
+    const project = PROJECT_DATA.find((project) => {
+      return project.id === id;
     });
     return project;
   };

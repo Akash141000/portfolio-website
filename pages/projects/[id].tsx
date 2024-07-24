@@ -1,40 +1,30 @@
-import Head from "next/dist/shared/lib/head";
 import { NextPage } from "next";
 import { useRouter } from "next/dist/client/router";
 import { useContext } from "react";
-
-//layout
-import Main from "../../components/layout/layout";
-import Loading from "../../components/layout/loading";
-import ProjectDetailComponent from "../../components/project-detail/projectDetail";
+import {
+  Layout,
+  Loader,
+  Head,
+  IProject,
+  ProjectDetails,
+} from "../../components";
 import ProjectContext from "../../store/project-context";
 
-const ProjectDetail: NextPage = () => {
+const ProjectOverview: NextPage = () => {
   const router = useRouter();
   const { id } = router.query;
 
   const projectCtx = useContext(ProjectContext);
-  const project = projectCtx.findProject(id as string);
-
-  if (!project) {
-    return (
-      <Main>
-        <Loading />
-      </Main>
-    );
-  }
+  const project: IProject = projectCtx.findProject(id as string);
 
   return (
     <>
-      <Head>
-        <meta name="description" content={project.excerpt} />
-        <title>{project.title}</title>
-      </Head>
-      <Main>
-        <ProjectDetailComponent project={project} />
-      </Main>
+      <Head content={project.description} title={project.title} />
+      <Layout>
+        <ProjectDetails {...project} />
+      </Layout>
     </>
   );
 };
 
-export default ProjectDetail;
+export default ProjectOverview;

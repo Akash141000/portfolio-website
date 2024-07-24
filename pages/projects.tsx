@@ -1,18 +1,21 @@
 import { NextPage } from "next";
 import { useContext } from "react";
 import ProjectContext from "../store/project-context";
-import { Head, Layout } from "../components";
-import ProjectList from "../components/project-list/projectList";
+import { Head, Layout, Project } from "../components";
+import { ProjectsListWrapper } from "../components/projects-list-wrapper/projectsListWrapper";
 
 const Projects: NextPage = () => {
-  const projectCtx = useContext(ProjectContext);
-  const { projects } = projectCtx;
+  const { projects } = useContext(ProjectContext);
 
   return (
     <>
       <Head content="projects" title="Projects" />
       <Layout>
-        <ProjectList list={projects} />
+        <ProjectsListWrapper>
+          {projects.map((project, key) => (
+            <Project key={key} {...project} />
+          ))}
+        </ProjectsListWrapper>
       </Layout>
     </>
   );

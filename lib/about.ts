@@ -1,4 +1,4 @@
-import { About_data } from "./about.data";
+import { ABOUT_DATA } from "./about.data";
 
 export const abouthandler = async (): Promise<{ [key: string]: any }> => {
   // const response = await fetch(
@@ -7,5 +7,5 @@ export const abouthandler = async (): Promise<{ [key: string]: any }> => {
   // const result = await response.json();
   // return result;
 
-  return About_data;
+  return ABOUT_DATA;
 };

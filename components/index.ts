@@ -11,5 +11,5 @@ export * from "./head/head";
 export * from "./job-project-item/jobProjectItem";
 export * from "./job-project-list-Wrapper/jobProjectListWrapper";
 export * from "./project/project";
-export * from "./project-detail/projectDetail";
-export * from "./project-list/projectList";
+export * from "./project-details/projectDetails";
+export * from "./projects-list-wrapper/projectsListWrapper";

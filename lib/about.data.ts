@@ -56,7 +56,7 @@ const skills = [
   },
 ];
 
-export const About_data = {
+export const ABOUT_DATA = {
   introduction: introduction,
   hobbies: hobbies,
   skills: skills,

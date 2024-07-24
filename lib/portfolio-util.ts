@@ -1,8 +1,8 @@
-import { async } from "@firebase/util";
+// import { async } from "@firebase/util";
 import { FirebaseOptions, initializeApp } from "firebase/app";
 import { getDownloadURL, getStorage, listAll, ref } from "firebase/storage";
-import { IProject } from "../utils/type";
-import { ProjectsData } from "./projects.data";
+import { IProject } from "../components";
+import { PROJECT_DATA } from "../utils/project.data";
 
 const config: FirebaseOptions = {
   apiKey: process.env.FIREBASE_API_KEY,
@@ -34,5 +34,5 @@ export const getProjects = async (): Promise<IProject[]> => {
   // const projects = await createProjectsArray(allProjects);
   // return projects;
 
-  return ProjectsData;
+  return PROJECT_DATA;
 };
