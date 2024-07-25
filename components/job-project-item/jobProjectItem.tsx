@@ -1,5 +1,5 @@
-import { IProject } from "../../types/types";
 import { Chip } from "../chip/chip";
+import { IProject } from "../project/project";
 
 export const JobProjectItem: React.FC<IProject> = ({
   title,
