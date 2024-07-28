@@ -16,41 +16,16 @@ const GithubIcon = styled(Github)`
 const Navbar: React.FC = (props) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const navItems = (
-    <ul className={styles["ul-list"]}>
-      <li className="md:hidden">
-        <Link href="/">About</Link>
-      </li>
-      <li>
-        <Link href="/work"> Work</Link>
-      </li>
-      <li>
-        <Link href="/projects"> Projects</Link>
-      </li>
-      <li>
-        <Link href="/contact"> Contact Me</Link>
-      </li>
-      <li>
-        <Link passHref href="https://github.com/Akash141000">
-          <span>
-            <span className="hidden md:inline-block hover:underline">
-              <GithubIcon />
-              Source
-            </span>
-            <span className="md:hidden">View Source</span>
-          </span>
-        </Link>
-      </li>
-    </ul>
-  );
-
   return (
     <>
       <nav className={styles.navbar}>
         <header className="text-2xl font-bold">
           <Link href="/"> Portfolio </Link>
         </header>
-        <div className="hidden md:inline-block">{navItems}</div>
+        <div className="hidden md:inline-block">
+          {" "}
+          <NavItems onClick={() => setIsOpen(false)} />
+        </div>
 
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -71,10 +46,40 @@ const Navbar: React.FC = (props) => {
         </svg>
       </nav>
       <div className={isOpen ? styles["menu-icon-list"] : "hidden"}>
-        {navItems}
+        <NavItems onClick={() => setIsOpen(false)} />
       </div>
     </>
   );
 };
 
 export default Navbar;
+
+const NavItems: React.FC<{ onClick: () => void }> = (props) => {
+  return (
+    <ul className={styles["ul-list"]}>
+      <li className="md:hidden" {...props}>
+        <Link href="/">About</Link>
+      </li>
+      <li {...props}>
+        <Link href="/work"> Work</Link>
+      </li>
+      <li {...props}>
+        <Link href="/projects"> Projects</Link>
+      </li>
+      <li {...props}>
+        <Link href="/contact"> Contact Me</Link>
+      </li>
+      <li {...props}>
+        <Link passHref href="https://github.com/Akash141000">
+          <span>
+            <span className="hidden md:inline-block hover:underline">
+              <GithubIcon />
+              Source
+            </span>
+            <span className="md:hidden">View Source</span>
+          </span>
+        </Link>
+      </li>
+    </ul>
+  );
+};
