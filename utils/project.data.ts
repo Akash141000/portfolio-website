@@ -11,9 +11,16 @@ export const PROJECT_DATA: IProject[] = [
   {
     id: "mqueue",
     title: "Mqueue",
-    description: "Mqueue is a messaging queue created using gaoling",
+    description: "Mqueue is a messaging queue created using golang",
     stack: ["Golang", "WebSockets"],
     source: ["https://github.com/Akash141000/mqueue"],
+  },
+  {
+    id: "redis",
+    title: "Redis Clone",
+    description: "Redis clone created using golang",
+    stack: ["Golang"],
+    source: ["https://github.com/Akash141000/redis-server"],
   },
   {
     id: "microservices-go-grpc",
